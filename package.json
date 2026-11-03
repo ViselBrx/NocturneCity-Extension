@@ -2,15 +2,21 @@
   "name": "nocturne-city-theme",
   "publisher": "nocturne-city",
   "displayName": "Nocturne City",
-  "description": "A cinematic dark theme with midnight asphalt, cool city lights and restrained violet neon.",
-  "version": "0.1.0",
+  "description": "Ten dark VS Code themes inspired by cities after midnight: neon, rain, harbors, lanterns and moonlight.",
+  "icon": "_assets/noctunefantasy-icon.png",
+  "version": "0.3.0",
   "license": "MIT",
   "files": [
-    "themes",
+    "themes/**",
+    "_assets/noctunefantasy-icon.png",
     "README.md",
-    "CHANGELOG.md",
     "LICENSE"
   ],
+  "scripts": {
+    "check": "node scripts/check-themes.mjs",
+    "vscode:prepublish": "npm run check",
+    "package": "vsce package --no-dependencies"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ViselBrx/NocturneCity-Extension.git"
@@ -19,7 +25,16 @@
     "dark theme",
     "nocturne",
     "city",
-    "neon"
+    "midnight skyline",
+    "neon",
+    "rain",
+    "harbor",
+    "amber",
+    "night city",
+    "city lights",
+    "lanterns",
+    "moonlit",
+    "old town"
   ],
   "galleryBanner": {
     "color": "#080B12",
@@ -37,8 +52,55 @@
         "label": "Nocturne City",
         "uiTheme": "vs-dark",
         "path": "./themes/nocturne-city-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Midnight Skyline",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-midnight-skyline-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Neon District",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-neon-district-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Rainy Avenue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-rainy-avenue-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Sodium Street",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-sodium-street-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Midnight Harbor",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-midnight-harbor-color-theme.json"
+      },
+      {
+        "label": "Nocturne City After Hours",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-after-hours-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Gothic Lantern",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-gothic-lantern-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Verdant Fog",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-verdant-fog-color-theme.json"
+      },
+      {
+        "label": "Nocturne City Moonlit Gothic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nocturne-city-moonlit-gothic-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.1.0"
   }
 }
-
